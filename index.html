@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+  <title>Influential Quotes</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0
+    }
+
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+      background-color: #f5f5f5; /* Background color for the profile section */
+    }
+
+    .profile-container img {
+      width: 150px; /* Adjust to your preference */
+      border-radius: 50%; /* Makes the image round */
+      margin-bottom: 20px;
+    }
+
+    .profile-container h2 {
+      margin-top: 0;
+      font-family: tahoma;
+      font-size: 24px;
+      color: #333;
+    }
+    *{
+      padding: 0;
+      margin: 0
+    }
+    .parent:first-of-type {
+      background: #ffffff url("http://s8.favim.com/orig/140403/art-flower-flowers-grunge-Favim.com-1605689.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .parent:nth-of-type(2) {
+      background: #ffffff url("http://s9.favim.com/orig/130908/beauty-flower-flowers-photo-Favim.com-906054.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .parent:nth-of-type(3) {
+      background: #ffffff url("http://s12.favim.com/orig/160220/flowers-grunge-hipster-photography-Favim.com-4023702.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .parent:nth-of-type(4) {
+      background: #ffffff url("http://data.whicdn.com/images/59213807/original.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .parent:last-of-type {
+      background: #ffffff url("http://s3.favim.com/orig/47/beautiful-cute-flowers-rain-red-Favim.com-436699.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .parent {
+      width: 100%;
+      height: 150vh;
+      color: #fff;
+      text-shadow: 0 0 5px #000;
+      font-family: tahoma;
+      text-align: center;
+      line-height: 180%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden
+    }
+    .parent p {
+      padding: 25px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="profile-container">
+    <img src="https://myinfluentialquoteswebsite.s3.amazonaws.com/profile.png" alt="Profile Image">
+    <h2>My Favorite Quotes</h2>
+  </div>
+    <div class="parent">
+      <div class="parallex">
+      <h1>Experience is the best teacher, and the worst experiences teach the best lessons.</h1>
+      <p>Jordan Peterson</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Avatar_girl_face.png" width="100"/>
+      </div>
+    </div>
+    
+    <div class="parent">
+      <div>
+      <h1>For what it’s worth: it’s never too late or, in my case, too early to be whoever you want to be. There’s no time limit, stop whenever you want. You can change or stay the same, there are no rules to this thing. We can make the best or the worst of it. I hope you make the best of it. And I hope you see things that startle you. I hope you feel things you never felt before. I hope you meet people with a different point of view. I hope you live a life you’re proud of. If you find that you’re not, I hope you have the courage to start all over again.</h1>
+      <p>Francis Scott Fitzgerald</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Avatar_girl_face.png" width="100"/>
+      </div>
+    </div>
+    
+    <div class="parent">
+      <div>
+      <h1>Hard times create strong men, strong men create good times, good times create weak men, and weak men create hard times.</h1>
+      <p>G. Michael Hopf</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Avatar_girl_face.png" width="100"/>
+      </div>
+    </div>
+    
+    <div class="parent">
+      <div>
+      <h1>"Most of us sweep our failures and evil secrets under the rug, but when we run into problems, that rug gets lifted up, and our darkness re-emerges, floods our soul, and influences the decisions which determine our character."</h1>
+      <p>David Goggins</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Avatar_girl_face.png" width="100"/>
+      </div>
+    </div>
+    
+    <div class="parent">
+      <div>
+      <h1>Sabr (patience) is not remaining quiet and allowing anger to build up inside you. Sabr (patience) is to talk about what's bothering you without losing control of your emotions.</h1>
+      <p>Nouman Ali Khan</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Avatar_girl_face.png" width="100"/>
+      </div>
+    </div>
+  
+
+  <script>
+    /*global $, jQuery, console, alert, prompt */
+$(function() {
+  "use strict";
+  // All Variable 
+  var parallex = $(".parent > .parallex");
+  // Scroll 
+
+  $(window).on('scroll', function() {
+    parallex.css({
+      "transform": "translate(0, " + $(window).scrollTop() + "px)"
+    });
+    if ($('.parent > div').offset.top() >= $(window).scrollTop()) {
+      parallex = $(".parent > .parallex, .parent > div");
+    }
+  });
+
+});
+  </script>
+
+</body>
+
+</html>
+
